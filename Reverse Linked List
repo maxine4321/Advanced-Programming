@@ -1,0 +1,14 @@
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        
+        ListNode* before= nullptr;
+        while(head !=nullptr){
+        ListNode* after=head->next;
+        head->next= before;
+        before = head;
+        head= after;
+        }
+        return before;
+    }
+};
